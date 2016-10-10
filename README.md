@@ -12,7 +12,7 @@ npm install
 mix phoenix.server
 ```
 
-Open <http://localhost:4000>, and push `START` button. Then, `start.sh` results send to client with HTTP chunked response.
+Open <http://localhost:4000>, and push `START` button. Then, send `start.sh` results to client with HTTP chunked response.
 
 
 ##How to send chunked response
