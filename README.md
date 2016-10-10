@@ -33,7 +33,7 @@ defp deps do
 end
 ```
 
-Porcelain library is for execute shell-script.
+[Porcelain](https://hex.pm/packages/porcelain) library is for execute shell-script.
 
 
 - package.json :
@@ -45,7 +45,7 @@ Porcelain library is for execute shell-script.
 },
 ```
 
-stream-http library is for client of chunked response.
+[stream-http](https://www.npmjs.com/package/stream-http) library is for client of chunked response.
 
 
 ###2. Server code
