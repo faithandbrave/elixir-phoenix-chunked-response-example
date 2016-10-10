@@ -94,3 +94,8 @@ var req = http.request(options, (res) => {
 req.write(postData);
 req.end();
 ```
+
+
+##Note
+If you use Nginx, you should add `proxy_buffering off;`. Nginx cache server response, cause client receive all response at on time.
+
