@@ -99,3 +99,7 @@ req.end();
 ##Note
 If you use Nginx, you should add `proxy_buffering off;`. Nginx cache server response, cause client receive all response at on time.
 
+
+##References
+- [Protocols - Plug.Conn](https://hexdocs.pm/plug/Plug.Conn.html#module-protocols)
+
