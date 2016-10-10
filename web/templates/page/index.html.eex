@@ -1,0 +1,51 @@
+<div class="jumbotron">
+  <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
+  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
+</div>
+<script type="text/javascript">
+<!--
+  function cnfmAndSubmit() {
+    if (window.confirm('Ready?')) {
+      var postData = "{\'msg\' : \'Hello World!\'}";
+
+      var options = {
+        path: '/',
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Content-Length': postData.length
+        }
+      };
+
+      var http = require('stream-http')
+      var req = http.request(options, (res) => {
+        console.log(`STATUS: ${res.statusCode}`);
+        console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
+        res.setEncoding('utf8');
+        res.on('data', (chunk) => {
+          document.getElementById('chunked-output').textContent = document.getElementById('chunked-output').textContent + chunk;
+        });
+        res.on('end', () => {
+          console.log('complete');
+        });
+      });
+
+      req.on('error', (e) => {
+        console.log(`problem with request: ${e.message}`);
+      });
+
+      // write data to request body
+      console.log("start")
+      req.write(postData);
+      req.end();
+    } else {
+      return false;
+    }
+  }
+// -->
+</script>
+<form name="frm" method="post" action=<%=page_path(@conn, :start)%>>
+  <input type="button" onclick="cnfmAndSubmit();" value="START" />
+</form>
+<pre id="chunked-output">
+</pre>
