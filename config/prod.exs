@@ -19,6 +19,9 @@ config :chunk_server, ChunkServer.Endpoint,
 # Do not print debug messages in production
 config :logger, level: :info
 
+config :porcelain,
+  driver: Porcelain.Driver.Basic
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
