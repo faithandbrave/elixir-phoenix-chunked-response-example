@@ -4,7 +4,7 @@ The repository is HTTP chunked transfer encoding example for Elixir/Phoenix. a.k
 ![chunk_demo.gif](chunk_demo.gif)
 
 
-##How to Run
+## How to Run
 ```
 mix deps.get
 npm install
@@ -15,8 +15,8 @@ mix phoenix.server
 Open <http://localhost:4000>, and push `START` button. Then, send `start.sh` results to client with HTTP chunked response.
 
 
-##How to send chunked response
-###1. Dependent libraries
+## How to send chunked response
+### 1. Dependent libraries
 - mix.exs :
 
 ```elixir
@@ -48,7 +48,7 @@ end
 [stream-http](https://www.npmjs.com/package/stream-http) library is for client of chunked response.
 
 
-###2. Server code
+### 2. Server code
 - web/controller/page_controller.ex
 
 ```elixir
@@ -66,7 +66,7 @@ end
 ```
 
 
-###3. Client code
+### 3. Client code
 - web/static/js/app.js
 
 ```javascript
@@ -96,10 +96,10 @@ req.end();
 ```
 
 
-##Note
+## Note
 If you use Nginx, you should add `proxy_buffering off;`. Nginx cache server response, cause client receive all response at on time.
 
 
-##References
+## References
 - [Protocols - Plug.Conn](https://hexdocs.pm/plug/Plug.Conn.html#module-protocols)
 
